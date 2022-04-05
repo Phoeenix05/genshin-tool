@@ -1,0 +1,29 @@
+.content {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  transform: translateY(var(--content-y-offset));
+
+  .list__characters, .list__weapons, .list__elements { 
+    box-sizing: border-box;
+    margin: 1rem;
+    padding: 0.75rem;
+    background-color: var(--secondary-color);
+    border-radius: 16px;
+  }
+  
+  .list__characters {
+    width: 90%;
+    height: 512px;
+  }
+
+  .list__weapons, .list__elements {
+    width: calc(45% - 1rem);
+    height: 256px;
+  }
+}

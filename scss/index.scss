@@ -1,0 +1,21 @@
+:root {
+  --bg-color: rgb(30, 30, 30);
+  --secondary-color: rgb(25, 25, 25);
+  --content-y-offset: -64px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: calc(auto - var(--content-y-offset));
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+}
