@@ -17,7 +17,7 @@
           transform: translateY(var(--content-y-offset));
 }
 
-.content .list__characters, .content .list__weapons, .content .list__elements {
+.content .character_list, .content .weapon_list, .content .vision_list {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 1rem;
@@ -26,12 +26,29 @@
   border-radius: 16px;
 }
 
-.content .list__characters {
+.content .character_list {
   width: 90%;
-  height: 512px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.content .list__weapons, .content .list__elements {
+.content .character_list .character {
+  margin: .4rem;
+}
+
+.content .character_list .character #icon {
+  width: 64px;
+  height: 64px;
+}
+
+.content .weapon_list, .content .vision_list {
   width: calc(45% - 1rem);
   height: 256px;
 }

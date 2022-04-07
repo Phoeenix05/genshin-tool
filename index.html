@@ -13,23 +13,35 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   <title>Pho3n1x05's Genshin Tool</title>
+
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/page_header.css">
   <link rel="stylesheet" href="css/content.css">
 </head>
 <body>
+
   <div class="page__header">
     <span class="title">
       <h1>Pho3n1x05's</h1>
       <h2>Genshin Character Tool</h2>
     </span>
   </div>
+
   <div class="content">
-    <div class="list__characters">
-      <script src="js/character.links.js"></script>
+    <div class="character_list">
+      
+      <div class="character" v-bind:id="character" v-for="character in data">
+        <a v-bind:href="'./character.html?name=' + character">
+          <img id="icon" v-bind:src="icons[character]">
+        </a>
+      </div>
+      
+      <script src="js/character_list.js"></script>
     </div>
-    <div class="list__weapons"></div>
-    <div class="list__elements"></div>
+    
+    <!-- <div class="weapon_list"></div> -->
+    <!-- <div class="vision_list"></div> -->
   </div>
+
 </body>
 </html>

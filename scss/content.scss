@@ -9,7 +9,7 @@
 
   transform: translateY(var(--content-y-offset));
 
-  .list__characters, .list__weapons, .list__elements { 
+  .character_list, .weapon_list, .vision_list { 
     box-sizing: border-box;
     margin: 1rem;
     padding: 0.75rem;
@@ -17,12 +17,25 @@
     border-radius: 16px;
   }
   
-  .list__characters {
+  .character_list {
     width: 90%;
-    height: 512px;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .character {
+      margin: .4rem;
+
+      #icon {
+        width: 64px;
+        height: 64px;
+      }
+    }
   }
 
-  .list__weapons, .list__elements {
+  .weapon_list, .vision_list {
     width: calc(45% - 1rem);
     height: 256px;
   }
