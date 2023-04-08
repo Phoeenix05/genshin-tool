@@ -6,15 +6,13 @@ const app = Vue.createApp({
     }
   },
   async mounted() {
-    const data = await axios.get('https://api.genshin.dev/characters')
+    this.data = await axios.get('https://api.genshin.dev/characters')
       .then(res => res.data).catch(err => console.log(err))
-    this.data = data
-    
-    const icons = {}
-    data.forEach(character => {
-      icons[character] = `https://api.genshin.dev/characters/${character}/icon`
-    })
-    this.icons = icons
+  },
+  methods: {
+    getIconLink(character){
+      return `https://api.genshin.dev/characters/${character}/icon`
+    }
   }
 })
 

@@ -32,7 +32,7 @@
       
       <div class="character" v-bind:id="character" v-for="character in data">
         <a v-bind:href="'./character.html?name=' + character">
-          <img id="icon" v-bind:src="icons[character]">
+          <img id="icon" v-bind:src="getIconLink(character)">
         </a>
       </div>
       
